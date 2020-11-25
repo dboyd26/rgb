@@ -11,7 +11,7 @@ var score = 0;
 var scoreDisplay = document.querySelector("#scoreDisplay"); 
 var resetPressed = true; 
 
-
+//Loads the squares up
 init();
 
 function init(){
@@ -39,7 +39,7 @@ function setupModeButtons(){
 		});
 	}
 }
-
+// This function informs the user if the answer was correct on incorrect
 function setupSquares(){
 	for(var i = 0; i < squares.length; i++){
 	//add click listeners to squares
@@ -71,7 +71,7 @@ function setupSquares(){
 	}
 }
 
-
+// This function retrieves the colors used for the game. It also displays the name of the color once you get the right answer.
 async function updateColorName(){
 	const regex = /\([^\)]+\)/g; 
 	var rgbColors = pickedColor.match(regex); 
@@ -91,7 +91,7 @@ async function updateColorName(){
 		colorDisplay.textContent = colorData.name.value + "-ish"; 
 	}
 }
-
+//This function restarts the game.
 function reset(){
 	resetPressed = true;
 	colors = generateRandomColors(numSquares);
@@ -112,11 +112,11 @@ function reset(){
 	}
 	h1.style.background = "steelblue";
 }
-
+// Resets the game once you press the new colors button.
 resetButton.addEventListener("click", function(){
 	reset();
 })
-
+//This function changes the colors of the selected squares that were incorrect.
 function changeColors(color){
 	//loop through all squares
 	for(var i = 0; i < squares.length; i++){
@@ -124,12 +124,12 @@ function changeColors(color){
 		squares[i].style.background = color;
 	}
 }
-
+// Retrieve random colors
 function pickColor(){
 	var random = Math.floor(Math.random() * colors.length);
 	return colors[random];
 }
-
+// This function make sure that none of the random colors are repeated.
 function generateRandomColors(num){
 	//make an array
 	var arr = []
@@ -141,7 +141,7 @@ function generateRandomColors(num){
 	//return that array
 	return arr;
 }
-
+// Selects random colors from rgb
 function randomColor(){
 	//pick a "red" from 0 - 255
 	var r = Math.floor(Math.random() * 256);

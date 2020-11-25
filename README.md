@@ -9,13 +9,15 @@ We&#39;re going to explore a website that you run right on your desktop today. U
 
 3.  Using this documentation https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction to guide you: 
 
-    a.  What is the DOM?
+    a.  What is the DOM? read link for a and b
 
     b.  When is the DOM different than HTML?
 
-    c.  What is the state of the DOM when you first load the page?
 
-    d.  What is the state of the DOM if you turn off JavaScript and refresh the page? 
+
+   c.  What is the state of the DOM when you first load the page? It is similar to the source code.
+
+    d.  What is the state of the DOM if you turn off JavaScript and refresh the page? cmd + shift+ p . None of the functions work. No colors, can't choose a difficulty, nor do the rgb numbers pop up.
 
 4.  Now let's explore the code. Use the inspector to investigate the HTML, CSS and Javascript. 
 
@@ -24,18 +26,19 @@ We&#39;re going to explore a website that you run right on your desktop today. U
     b.  What happens inside the CSS file when you click on various elements in the page? 
 
         i.  What elements does the CSS file change? 
+            
 
     c.  What happens inside the HTML file when you click on various elements in the page? 
 
-    d.  Use breakpoints in the JavaScript to walk through what happens when you click on various elements on the page. 
+   xx d.  Use breakpoints in the JavaScript to walk through what happens when you click on various elements on the page. Things are changing in the DOM.
 
-        i.  What happens when you click on a color block?
+        i.  What happens when you click on a color block? with html, nothing happens. *use breakpoints*
 
         ii.  What happens when you click on the winning color block? 
 
         iii.  What happens when you click "Play again"? 
 
-        iv.  What HTML and CSS elements can JavaScript change? 
+        iv.  What HTML and CSS elements can JavaScript change?  All of them.
 
         v.  How does score keeping work? 
 
